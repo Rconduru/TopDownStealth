@@ -1,0 +1,189 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Interface/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Interface/Lobby.gd" type="Script" id=2]
+[ext_resource path="res://GFX/Interface/PNG/metalPanel_blue.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Interface/PNG/barHorizontal_shadow_left.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Interface/PNG/barHorizontal_shadow_mid.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Interface/PNG/barHorizontal_shadow_right.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Interface/Fonts/kenvector_future_thin.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 7 )
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer"]
+margin_left = 312.0
+margin_top = 100.0
+margin_right = 712.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 400, 400 )
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 40
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 45.0
+margin_right = -12.0
+margin_bottom = -12.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+margin_right = 376.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "welcome to "
+align = 1
+
+[node name="Split" type="HBoxContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+margin_top = 37.0
+margin_right = 376.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 0, 12 )
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 32.0
+margin_right = 38.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 6, 12 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 38.0
+margin_right = 338.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 300, 12 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 338.0
+margin_right = 344.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 6, 12 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Label2" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+margin_top = 59.0
+margin_right = 376.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Topdown stealth"
+align = 1
+
+[node name="Split2" type="HBoxContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+margin_top = 109.0
+margin_right = 376.0
+margin_bottom = 121.0
+rect_min_size = Vector2( 0, 12 )
+custom_constants/separation = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split2"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 32.0
+margin_right = 38.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 6, 12 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split2"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 38.0
+margin_right = 338.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 300, 12 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="CenterContainer/NinePatchRect/VBoxContainer/Split2"]
+modulate = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 0.0901961, 0.0862745, 0.0862745, 1 )
+margin_left = 338.0
+margin_right = 344.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 6, 12 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+margin_top = 131.0
+margin_right = 376.0
+margin_bottom = 291.0
+rect_min_size = Vector2( 0, 160 )
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer"]
+margin_left = 56.0
+margin_top = 38.0
+margin_right = 320.0
+margin_bottom = 122.0
+custom_constants/vseparation = 20
+columns = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+action_mode = 0
+
+[node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 2.0
+margin_right = 264.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "start mission"
+
+[node name="QuitGame" type="Button" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer"]
+margin_top = 52.0
+margin_right = 32.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Label2" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 54.0
+margin_right = 264.0
+margin_bottom = 81.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "quit game"
+[connection signal="pressed" from="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/NinePatchRect/VBoxContainer/CenterContainer/GridContainer/QuitGame" to="." method="_on_QuitGame_pressed"]
